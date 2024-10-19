@@ -6,6 +6,7 @@ import Servicios from "../components/Servicios.astro";
 import Testimonials from "../components/Testimonials.astro";
 import Footer from "../components/Footer.astro";
 import Contacto from "../components/Contacto.astro";
+import Portfolio from '../components/Portfolio.jsx';
 
 const links = [
 	{ text: "Inicio", href: "#" },
@@ -20,6 +21,7 @@ const links = [
 	<Hero />
 	<Servicios />
 	<Testimonials />
+	<Portfolio client:idle />
 	<Contacto />
 	<Footer />
 </BaseLayout>
