@@ -1,13 +1,17 @@
 ---
+import styles from '../styles/variables.css'; 
+
 const { title } = Astro.props;
 ---
-<html lang="es">
+<html lang="es" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <!-- applied variables styles -->
+    <link rel="stylesheet" href={styles}>
   </head>
-  <body>
+  <body class="bg-ftnBrandMain-100 dark:bg-ftnBrandMain-900">
     <main>
       <slot /> 
     </main>

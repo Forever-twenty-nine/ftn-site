@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+@layer base{
+    :root {
+        --brandMain100: #afa2c5;
+        --brandMain900: #0a0118;
+        
+    }
+    /* Test theme: https://www.sitepoint.com/theming-tailwind-css-variables-clean-architecture/  */
+    /* :root[data-theme="dark"] {
+        --brandMain900: #0a0118;
+        --brandMain100: #afa2c5;
+      }
+    
+    :root[data-theme="light"] {
+        --brandMain900: #bfa4ea;
+        --brandMain100: #afa2c5;
+    } */
+}
