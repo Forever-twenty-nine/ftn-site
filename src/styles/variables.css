@@ -1,6 +1,6 @@
 :root {
 
-    /* Design Token Primitive */
+    /* Define Design Token Primitive */
     --brand_primary_50: #f5ffe6;
     --brand_primary_100: #e8fec9;
     --brand_primary_200: #d1fd99;
@@ -49,6 +49,24 @@
 	--brand_neutral_900:    #41426e;
 	--brand_neutral_950:    #131320;        
 }
+
+
+:root[data-theme="light"] {
+
+    /* Define Design Token Semantic */
+    --text:             var(--brand_neutral_950);
+    --background:       var(--brand_neutral_100);
+}
+ 
+
+
+:root[data-theme="dark"] {
+
+    /* Define Design Token Semantic */
+    --text:             var(--brand_neutral_100);
+    --background:       var(--brand_neutral_950);
+}
+
 
 
 @font-face {
