@@ -1,4 +1,12 @@
 <section class="py-12">
+    <!-- <div class="build-lines">
+        <div class="build-line">
+            <div class="build-line-mask">
+                <div></div>
+            </div>
+        </div>
+        <div class="build-line"></div>
+    </div> -->
     <div class=" ftn-container text-center">
         <h1 class=" font-sharp_grotesk_light text-sm">
             Agencia de diseño UX/UI y desarrollo web
@@ -28,3 +36,35 @@
         >
     </div>
 </section>
+
+
+<style>
+    .build-line{
+        @apply absolute top-0 border-r border-b border-r-red-300/10 border-b-green-300/10 rounded-br-md w-[300px] h-[250px]
+    }
+    .build-line-mask{
+        mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(100% + 1px);
+        height: calc(100% + 1px);
+        padding: 0 1px 1px 0;
+        border-radius: inherit;
+    }
+    .build-line-mask div{
+        width: 500px;
+    height: 500px;
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    background: conic-gradient(rgba(109, 46, 255, 0), rgba(158, 122, 255, .3490196078) 6%, rgba(254, 139, 187, .6980392157) 10%, #ffbd7a 14.9%, rgba(109, 46, 255, 0) 15%);
+    animation: build-line-rotate 15s linear infinite;
+    }
+    @keyframes build-line-rotate{
+        60%, 100% {
+            transform: translateZ(0) rotate(1turn);
+        }
+    }
+</style>
