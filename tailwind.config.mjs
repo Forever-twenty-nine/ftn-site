@@ -60,7 +60,11 @@ export default {
 					800: "var(--brand_neutral_800)",
 					900: "var(--brand_neutral_900)",
 					950: "var(--brand_neutral_950)",
-				}
+				},
+
+				// Define and Use Design Token Component
+				token_text: "var(--text)",
+				token_bg: "var(--background)"
 			},
 			fontFamily:{
 				sharp_grotesk_book:  ['SharpGrotesk-Book', 'sans-serif'],
