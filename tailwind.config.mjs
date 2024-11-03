@@ -66,6 +66,7 @@ export default {
 				sharp_grotesk_book:  ['SharpGrotesk-Book', 'sans-serif'],
 				sharp_grotesk_light:  ['SharpGrotesk-Light', 'sans-serif'],
 				sharp_grotesk_semibold:  ['SharpGrotesk-SemiBold', 'sans-serif'],
+				sharp_grotesk_semibold25: ['SharpGrotesk-SemiBold25', 'sans-serif']
 			}
 		},
 		

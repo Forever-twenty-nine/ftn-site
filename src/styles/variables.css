@@ -75,6 +75,14 @@
     font-style: normal;
     font-display: swap; /* Lo muestra de inmediato */
 }
+@font-face {
+    font-family: 'SharpGrotesk-SemiBold25';
+    src: url('/fonts/SharpGrotesk-SemiBold25.woff2') format('woff2'),
+         url('/fonts/SharpGrotesk-SemiBold25.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Lo muestra de inmediato */
+}
 
     /* Test theme: https://www.sitepoint.com/theming-tailwind-css-variables-clean-architecture/  */
     /* :root[data-theme="dark"] {
