@@ -55,8 +55,13 @@
 :root[data-theme="light"] {
 
     /* Define Design Token Semantic */
-    --text:             var(--brand_neutral_950);
-    --background:       var(--brand_neutral_100);
+    --text:                 var(--brand_neutral_950);
+    --background:           var(--brand_neutral_100);
+    --btn_primary_text:     var(--brand_neutral_100);
+    --btn_primary_text_hover: var(--brand_neutral_50);
+    --btn_primary_bg:       var(--brand_secondary_600);
+    --btn_primary_bg_hover: var(--brand_secondary_700);
+
 }
  
 
@@ -64,8 +69,12 @@
 :root[data-theme="dark"] {
 
     /* Define Design Token Semantic */
-    --text:             var(--brand_neutral_100);
-    --background:       var(--brand_neutral_950);
+    --text:                     var(--brand_neutral_100);
+    --background:               var(--brand_neutral_950);
+    --btn_primary_text:         var(--brand_neutral_50);
+    --btn_primary_text_hover:   var(--brand_neutral_50);
+    --btn_primary_bg:           var(--brand_secondary_600);
+    --btn_primary_bg_hover:     var(--brand_secondary_700);
 }
 
 

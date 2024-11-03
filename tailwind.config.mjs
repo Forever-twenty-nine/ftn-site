@@ -64,7 +64,11 @@ export default {
 
 				// Define and Use Design Token Component
 				token_text: "var(--text)",
-				token_bg: "var(--background)"
+				token_bg: "var(--background)",
+				token_btn_cta_text: "var(--btn_primary_text)",
+				token_btn_cta_text_hover: "var(--btn_primary_text_hover)",
+				token_btn_cta_bg: "var(--btn_primary_bg)",
+				token_btn_cta_bg_hover: "var(--btn_primary_bg_hover)",
 			},
 			fontFamily:{
 				sharp_grotesk_book:  ['SharpGrotesk-Book', 'sans-serif'],
