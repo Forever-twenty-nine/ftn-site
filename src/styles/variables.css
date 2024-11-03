@@ -1,58 +1,80 @@
+:root {
 
-    :root {
+    /* Design Token Primitive */
+    --brand_primary_50: #f5ffe6;
+    --brand_primary_100: #e8fec9;
+    --brand_primary_200: #d1fd99;
+    --brand_primary_300: #aaf74d; /* Brand */
+    --brand_primary_400: #94ed2e;
+    --brand_primary_500: #75d30f;
+    --brand_primary_600: #58a907;
+    --brand_primary_700: #44800b;
+    --brand_primary_800: #38650f;
+    --brand_primary_900: #305611;
+    --brand_primary_950: #163003;
 
-        /* Design Token Primitive */
-        --brand_primary_50: #f5ffe6;
-        --brand_primary_100: #e8fec9;
-        --brand_primary_200: #d1fd99;
-        --brand_primary_300: #aaf74d; /* Brand */
-        --brand_primary_400: #94ed2e;
-        --brand_primary_500: #75d30f;
-        --brand_primary_600: #58a907;
-        --brand_primary_700: #44800b;
-        --brand_primary_800: #38650f;
-        --brand_primary_900: #305611;
-        --brand_primary_950: #163003;
+    --brand_secondary_50: #f5f3ff;
+    --brand_secondary_100: #ece8ff;
+    --brand_secondary_200: #dad5ff;
+    --brand_secondary_300: #c0b2ff;
+    --brand_secondary_400: #a087fe;
+    --brand_secondary_500: #8257fb;
+    --brand_secondary_600: #7b40f4; /* brand */
+    --brand_secondary_700: #6422df;
+    --brand_secondary_800: #531cbb;
+    --brand_secondary_900: #461999;
+    --brand_secondary_950: #290d68;
 
-        --brand_secondary_50: #f5f3ff;
-        --brand_secondary_100: #ece8ff;
-        --brand_secondary_200: #dad5ff;
-        --brand_secondary_300: #c0b2ff;
-        --brand_secondary_400: #a087fe;
-        --brand_secondary_500: #8257fb;
-        --brand_secondary_600: #7b40f4; /* brand */
-        --brand_secondary_700: #6422df;
-        --brand_secondary_800: #531cbb;
-        --brand_secondary_900: #461999;
-        --brand_secondary_950: #290d68;
+    --brand_tertiary_50: #ecfffe;
+    --brand_tertiary_100: #d0fdfc;
+    --brand_tertiary_200: #a6fbfa;
+    --brand_tertiary_300: #69f7f6;
+    --brand_tertiary_400: #2ce9ec; /* brand */
+    --brand_tertiary_500: #09cbd1;
+    --brand_tertiary_600: #0aa3b0;
+    --brand_tertiary_700: #10828e;
+    --brand_tertiary_800: #166874;
+    --brand_tertiary_900: #175762;
+    --brand_tertiary_950: #093a43;
 
-        --brand_tertiary_50: #ecfffe;
-        --brand_tertiary_100: #d0fdfc;
-        --brand_tertiary_200: #a6fbfa;
-        --brand_tertiary_300: #69f7f6;
-        --brand_tertiary_400: #2ce9ec; /* brand */
-        --brand_tertiary_500: #09cbd1;
-        --brand_tertiary_600: #0aa3b0;
-        --brand_tertiary_700: #10828e;
-        --brand_tertiary_800: #166874;
-        --brand_tertiary_900: #175762;
-        --brand_tertiary_950: #093a43;
+    --brand_neutral_50:     #f2f5fb;
+	--brand_neutral_100:    #e7ecf8;
+	--brand_neutral_200:    #d4dcf1;
+	--brand_neutral_300:    #b9c4e8;
+	--brand_neutral_400:    #9ca6dd;
+	--brand_neutral_500:    #848ad0;
+	--brand_neutral_600:    #6a6ac1;
+	--brand_neutral_700:    #5a59a9;
+	--brand_neutral_800:    #4a4a89;
+	--brand_neutral_900:    #41426e;
+	--brand_neutral_950:    #131320;        
+}
 
-        --brand_neutral_50:     #f2f5fb;
-		--brand_neutral_100:    #e7ecf8;
-		--brand_neutral_200:    #d4dcf1;
-		--brand_neutral_300:    #b9c4e8;
-		--brand_neutral_400:    #9ca6dd;
-		--brand_neutral_500:    #848ad0;
-		--brand_neutral_600:    #6a6ac1;
-		--brand_neutral_700:    #5a59a9;
-		--brand_neutral_800:    #4a4a89;
-		--brand_neutral_900:    #41426e;
-		--brand_neutral_950:    #131320;
 
-        
-    }
-
+@font-face {
+    font-family: 'SharpGrotesk-Book';
+    src: url('/fonts/SharpGrotesk-Book20.woff2') format('woff2'),
+         url('/fonts/SharpGrotesk-Book20.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Lo muestra de inmediato */
+}
+@font-face {
+    font-family: 'SharpGrotesk-Light';
+    src: url('/fonts/SharpGrotesk-Light20.woff2') format('woff2'),
+         url('/fonts/SharpGrotesk-Light20.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Lo muestra de inmediato */
+}
+@font-face {
+    font-family: 'SharpGrotesk-SemiBold';
+    src: url('/fonts/SharpGrotesk-SemiBold20.woff2') format('woff2'),
+         url('/fonts/SharpGrotesk-SemiBold20.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Lo muestra de inmediato */
+}
 
     /* Test theme: https://www.sitepoint.com/theming-tailwind-css-variables-clean-architecture/  */
     /* :root[data-theme="dark"] {

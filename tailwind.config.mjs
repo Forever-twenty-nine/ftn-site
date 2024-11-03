@@ -62,6 +62,11 @@ export default {
 					950: "var(--brand_neutral_950)",
 				}
 			},
+			fontFamily:{
+				sharp_grotesk_book:  ['SharpGrotesk-Book', 'sans-serif'],
+				sharp_grotesk_light:  ['SharpGrotesk-Light', 'sans-serif'],
+				sharp_grotesk_semibold:  ['SharpGrotesk-SemiBold', 'sans-serif'],
+			}
 		},
 		
 	},
