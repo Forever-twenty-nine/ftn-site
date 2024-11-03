@@ -7,26 +7,28 @@ interface Link {
 const { links = [] }: { links?: Link[] } = Astro.props;
 ---
 
-<header class="">
-    <div
-        class="container flex justify-between items-center bg-blue-600 rounded-lg shadow-lg p-6"
-    >
-        <h1 class="text-2xl font-bold text-white">FTN agency</h1>
-        <nav>
-            <ul class="flex space-x-6">
+<header class="pt-4 fixed w-full z-50">
+    <div class="ftn-container flex justify-between items-center">
+        <div class="">
+            ftn agency
+        </div>
+        <nav class=" relative border rounded-full border-solid border-brand_neutral-900 dark:border-white/10 overflow-hidden before:content-[''] before:w-full before:h-full before:absolute before:bg-neutral-950/50  before:backdrop-blur-sm before:z-0">
+            <ul class="flex z-10 relative px-4">
                 {
                     links.map((link: Link) => (
                         <li>
                             <a
                                 href={link.href}
-                                class="text-white hover:text-blue-200 transition duration-200"
+                                class=" font-sharp_grotesk_light text-sm px-3 py-3 block hover:text-brand_neutral-50 transition duration-200"
                             >
                                 {link.text}
                             </a>
                         </li>
                     ))
                 }
+                <!-- <li><a href="#">button here</a></li> -->
             </ul>
         </nav>
+        <div class=" text-xs">switch</div> 
     </div>
 </header>
