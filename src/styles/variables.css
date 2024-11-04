@@ -1,124 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
+@layer base {
+    :root {
 
-    /* Define Design Token Primitive */
-    --brand_primary_50: #f5ffe6;
-    --brand_primary_100: #e8fec9;
-    --brand_primary_200: #d1fd99;
-    --brand_primary_300: #aaf74d; /* Brand */
-    --brand_primary_400: #94ed2e;
-    --brand_primary_500: #75d30f;
-    --brand_primary_600: #58a907;
-    --brand_primary_700: #44800b;
-    --brand_primary_800: #38650f;
-    --brand_primary_900: #305611;
-    --brand_primary_950: #163003;
+        /* Define Design Token Primitive */
+        --brand_green_50: #FDFFF7;
+        --brand_green_100: #FBFFED;
+        --brand_green_200: #F0FCD2;
+        --brand_green_300: #E6FCB6; 
+        --brand_green_400: #CCFA82;
+        --brand_green_500: #aaf74d; /* Brand */
+        --brand_green_600: #91DE3E;
+        --brand_green_700: #70BA2B;
+        --brand_green_800: #50941C;
+        --brand_green_900: #367010;
+        --brand_green_950: #1D4706;
 
-    --brand_secondary_50: #f5f3ff;
-    --brand_secondary_100: #ece8ff;
-    --brand_secondary_200: #dad5ff;
-    --brand_secondary_300: #c0b2ff;
-    --brand_secondary_400: #a087fe;
-    --brand_secondary_500: #8257fb;
-    --brand_secondary_600: #7b40f4; /* brand */
-    --brand_secondary_700: #6422df;
-    --brand_secondary_800: #531cbb;
-    --brand_secondary_900: #461999;
-    --brand_secondary_950: #290d68;
+        --brand_violet_50: #FBF5FF;
+        --brand_violet_100: #F8EDFF;
+        --brand_violet_200: #EACFFC;
+        --brand_violet_300: #D7AFFA;
+        --brand_violet_400: #AE77F7;  /* brand */
+        --brand_violet_500: #7b40f4;
+        --brand_violet_600: #6832DB; 
+        --brand_violet_700: #4F23B8;
+        --brand_violet_800: #391894;
+        --brand_violet_900: #250D6E;
+        --brand_violet_950: #140647;
 
-    --brand_tertiary_50: #ecfffe;
-    --brand_tertiary_100: #d0fdfc;
-    --brand_tertiary_200: #a6fbfa;
-    --brand_tertiary_300: #69f7f6;
-    --brand_tertiary_400: #2ce9ec; /* brand */
-    --brand_tertiary_500: #09cbd1;
-    --brand_tertiary_600: #0aa3b0;
-    --brand_tertiary_700: #10828e;
-    --brand_tertiary_800: #166874;
-    --brand_tertiary_900: #175762;
-    --brand_tertiary_950: #093a43;
+        --brand_turquoise_50: #F5FFFF;
+        --brand_turquoise_100: #E8FCFC;
+        --brand_turquoise_200: #C8F9FA;
+        --brand_turquoise_300: #A8F6F7;
+        --brand_turquoise_400: #68F0F2; 
+        --brand_turquoise_500: #2ce9ec;  /* brand */
+        --brand_turquoise_600: #24CAD6;
+        --brand_turquoise_700: #199EB3;
+        --brand_turquoise_800: #10738F;
+        --brand_turquoise_900: #0A4F6B;
+        --brand_turquoise_950: #042D45;
 
-    --brand_neutral_50:     #f2f5fb;
-	--brand_neutral_100:    #e7ecf8;
-	--brand_neutral_200:    #d4dcf1;
-	--brand_neutral_300:    #b9c4e8;
-	--brand_neutral_400:    #9ca6dd;
-	--brand_neutral_500:    #848ad0;
-	--brand_neutral_600:    #6a6ac1;
-	--brand_neutral_700:    #5a59a9;
-	--brand_neutral_800:    #4a4a89;
-	--brand_neutral_900:    #41426e;
-	--brand_neutral_950:    #131320;        
-}
+        --brand_blue_50:     #F7FBFC;
+        --brand_blue_100:    #F0F6FA;
+        --brand_blue_200:    #DFEBF5;
+        --brand_blue_300:    #CADCED;
+        --brand_blue_400:    #A4BCDE;
+        --brand_blue_500:    #849cd0;
+        --brand_blue_600:    #6C84BD;
+        --brand_blue_700:    #49609C;
+        --brand_blue_800:    #2F437D;
+        --brand_blue_900:    #1A2A5E;
+        --brand_blue_950:    #0B153D;        
+    }
 
-
-:root[data-theme="light"] {
-
-    /* Define Design Token Semantic */
-    --text:                 var(--brand_neutral_950);
-    --background:           var(--brand_neutral_100);
-    --btn_primary_text:     var(--brand_neutral_100);
-    --btn_primary_text_hover: var(--brand_neutral_50);
-    --btn_primary_bg:       var(--brand_secondary_600);
-    --btn_primary_bg_hover: var(--brand_secondary_700);
-
-}
  
+    @font-face {
+        font-family: 'SharpGrotesk-Book';
+        src: url('/fonts/SharpGrotesk-Book20.woff2') format('woff2'),
+             url('/fonts/SharpGrotesk-Book20.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap; /* Lo muestra de inmediato */
+    }
+    @font-face {
+        font-family: 'SharpGrotesk-Light';
+        src: url('/fonts/SharpGrotesk-Light20.woff2') format('woff2'),
+             url('/fonts/SharpGrotesk-Light20.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap; /* Lo muestra de inmediato */
+    }
+    @font-face {
+        font-family: 'SharpGrotesk-SemiBold';
+        src: url('/fonts/SharpGrotesk-SemiBold20.woff2') format('woff2'),
+             url('/fonts/SharpGrotesk-SemiBold20.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap; /* Lo muestra de inmediato */
+    }
+    @font-face {
+        font-family: 'SharpGrotesk-SemiBold25';
+        src: url('/fonts/SharpGrotesk-SemiBold25.woff2') format('woff2'),
+             url('/fonts/SharpGrotesk-SemiBold25.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap; /* Lo muestra de inmediato */
+    }
 
-
-:root[data-theme="dark"] {
-
-    /* Define Design Token Semantic */
-    --text:                     var(--brand_neutral_100);
-    --background:               var(--brand_neutral_950);
-    --btn_primary_text:         var(--brand_neutral_50);
-    --btn_primary_text_hover:   var(--brand_neutral_50);
-    --btn_primary_bg:           var(--brand_secondary_600);
-    --btn_primary_bg_hover:     var(--brand_secondary_700);
-}
-
-
-
-@font-face {
-    font-family: 'SharpGrotesk-Book';
-    src: url('/fonts/SharpGrotesk-Book20.woff2') format('woff2'),
-         url('/fonts/SharpGrotesk-Book20.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap; /* Lo muestra de inmediato */
-}
-@font-face {
-    font-family: 'SharpGrotesk-Light';
-    src: url('/fonts/SharpGrotesk-Light20.woff2') format('woff2'),
-         url('/fonts/SharpGrotesk-Light20.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap; /* Lo muestra de inmediato */
-}
-@font-face {
-    font-family: 'SharpGrotesk-SemiBold';
-    src: url('/fonts/SharpGrotesk-SemiBold20.woff2') format('woff2'),
-         url('/fonts/SharpGrotesk-SemiBold20.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap; /* Lo muestra de inmediato */
-}
-@font-face {
-    font-family: 'SharpGrotesk-SemiBold25';
-    src: url('/fonts/SharpGrotesk-SemiBold25.woff2') format('woff2'),
-         url('/fonts/SharpGrotesk-SemiBold25.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap; /* Lo muestra de inmediato */
-}
-
-    /* Test theme: https://www.sitepoint.com/theming-tailwind-css-variables-clean-architecture/  */
-    /* :root[data-theme="dark"] {
-        --brandMain900: #0a0118;
-        --brandMain100: #afa2c5;
-      }
-    
     :root[data-theme="light"] {
-        --brandMain900: #bfa4ea;
-        --brandMain100: #afa2c5;
-    } */
+
+        /* Define Design Token Semantic */
+        --color_text:                       var(--brand_blue_950);
+        --color_text_btn_primary:           var(--brand_blue_100);
+        --color_text_btn_primary_hover:     var(--brand_blue_50);
+        --color_bg:                         var(--brand_blue_100);        
+        --color_bg_btn_primary:             var(--brand_violet_500);
+        --color_bg_btn_primary_hover:       var(--brand_violet_600);
+    
+    }
+     
+    
+    
+    :root[data-theme="dark"] {
+    
+        /* Define Design Token Semantic */
+        --color_text:                     var(--brand_blue_100);
+        --color_text_btn_primary:         var(--brand_blue_50);
+        --color_text_btn_primary_hover:   var(--brand_blue_50);
+        --color_bg:                       var(--brand_blue_950);        
+        --color_bg_btn_primary:           var(--brand_violet_500);
+        --color_bg_btn_primary_hover:     var(--brand_violet_600);
+    } 
+
+
+}
+
