@@ -1,0 +1,34 @@
+---
+
+interface TitleProps{
+    isIcon?: boolean;
+    iconUrl?: string;
+    iconAlt?: string;
+}
+
+const { 
+    isIcon = true,
+    iconUrl, 
+    iconAlt 
+} = Astro.props
+
+---
+
+<div>
+    { isIcon ? 
+        <div class=" mb-4 w-20 h-20 border border-token_border_strong rounded-xl p-1 shadow-2xl shadow-[#abf74d7e]">
+            <div class="border border-token_border_strong_opacity w-full h-full rounded-lg p-1">
+                <div class="bg-gradient-to-b to-[rgba(170,247,77,.15)] from-[rgba(170,247,77,.0)] w-full h-full rounded-md">
+                    <img class="p-2" src={iconUrl} alt={iconAlt}>
+                </div>
+            </div>
+        </div> : '' 
+    }
+    
+    <h2 class="text-4xl font-sharp_grotesk_semibold25 leading-snug">
+        Construimos sitios web </br> 
+        <span class=" bg-clip-text text-transparent bg-token_text_gradient">
+            más intuitivos y funcionales
+        </span>
+    </h2>
+</div>

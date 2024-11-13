@@ -1,20 +1,41 @@
-<div class="build-lines">
-    <div class="build-line">
-        <div class="build-line-mask">
-            <div></div>
+---
+const { type } = Astro.props
+---
+
+{type === 'lineTL' && (
+    <div class="ftn-build-lines">
+        <div class="ftn-build-line">
+            <div class="ftn-build-line-mask">
+                <div></div>
+            </div>
         </div>
     </div>
-</div>
+)}
+
+{type === 'lineTR' && (
+    <p>soy la linea tr</p>
+)}
+
+{type === 'lineBL' && (
+    <p>soy la linea tr</p>
+)}
+
+{type === 'lineBR' && (
+    <p>soy la linea tr</p>
+)}
+
+
+
 
 <style>
-    .build-line{
+    .ftn-build-line{
         @apply absolute top-0 left-0;
         @apply w-[350px] h-[120px];
         @apply rounded-br-2xl;
         @apply border-r border-r-white/10;
         @apply border-b  border-b-white/10; 
     }
-    .build-line-mask{
+    .ftn-build-line-mask{
         @apply absolute top-0 left-0;
         @apply w-[calc(100%_+_1px)];
         @apply h-[calc(100%_+_1px)];
@@ -23,11 +44,11 @@
         mask-composite: exclude; 
         border-radius: inherit;
     }
-    .build-line-mask div{
+    .ftn-build-line-mask div{
         @apply absolute -bottom-28 -left-28;
         @apply w-[600px] h-[500px];
-        background: conic-gradient(rgba(109, 46, 255, 0), 
-                        var(--brand_blue_950) 6%, 
+        background: conic-gradient(rgba(255,255,255,.05), 
+                        var(--brand_blue_400) 6%, 
                         var(--brand_turquoise_500) 10%, 
                         var(--brand_green_500) 14.9%,
                         rgba(109, 46, 255, 0) 15%);

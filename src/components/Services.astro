@@ -1,20 +1,36 @@
 ---
-const servicios = [
-    {
-        title: "Diseño Gráfico",
-        description: "Creación de identidades visuales impactantes y modernas.",
-    },
-    {
-        title: "Desarrollo de Software",
-        description:
-            "Desarrollamos aplicaciones personalizadas para tu negocio.",
-    },
-];
+// const servicios = [
+//     {
+//         title: "Diseño Gráfico",
+//         description: "Creación de identidades visuales impactantes y modernas.",
+//     },
+//     {
+//         title: "Desarrollo de Software",
+//         description:
+//             "Desarrollamos aplicaciones personalizadas para tu negocio.",
+//     },
+// ];
+import Section from "./ui/Section.astro";
+import Title from "./ui/Title.astro"
+
+
 ---
 
-<section class="py-20 bg-gray-100">
+<Section classSection="" classContainer="">
+    
+    <Title isIcon={true} 
+           iconUrl="/images/icon-services.svg" 
+           iconAlt="icono de servicio"  />
+
+    
+
+</Section>
+
+<!-- <section class="py-20">
     <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-8">Nuestros Servicios</h2>
+        <h2 class="text-3xl font-bold mb-8">
+            Nuestros Servicios
+        </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             {
                 servicios.map((servicio) => (
@@ -22,10 +38,12 @@ const servicios = [
                         <h3 class="text-xl font-semibold mb-2">
                             {servicio.title}
                         </h3>
-                        <p>{servicio.description}</p>
+                        <p>
+                            {servicio.description}
+                        </p>
                     </div>
                 ))
             }
         </div>
     </div>
-</section>
+</section> -->

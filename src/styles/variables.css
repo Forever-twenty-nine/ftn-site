@@ -43,16 +43,16 @@
         --brand_turquoise_950: #042D45;
 
         --brand_blue_50:     #F7FBFC;
-        --brand_blue_100:    #F0F6FA;
-        --brand_blue_200:    #DFEBF5;
-        --brand_blue_300:    #CADCED;
-        --brand_blue_400:    #A4BCDE;
-        --brand_blue_500:    #849cd0;
-        --brand_blue_600:    #6C84BD;
-        --brand_blue_700:    #49609C;
-        --brand_blue_800:    #2F437D;
-        --brand_blue_900:    #1A2A5E;
-        --brand_blue_950:    #0B153D;        
+        --brand_blue_100:    #EDF5FA;
+        --brand_blue_200:    #D5E6F2;
+        --brand_blue_300:    #BCD4EB;
+        --brand_blue_400:    #8DACD9;
+        --brand_blue_500:    #6484c9;
+        --brand_blue_600:    #516FB5;
+        --brand_blue_700:    #385396;
+        --brand_blue_800:    #243978;
+        --brand_blue_900:    #14255C;
+        --brand_blue_950:    #08123B;        
     }
 
  
@@ -89,6 +89,7 @@
         font-display: swap; /* Lo muestra de inmediato */
     }
 
+    
     :root[data-theme="light"] {
 
         /* Define Design Token Semantic */
