@@ -1,4 +1,5 @@
 ---
+import SwitchTheme from "./scaffolding/SwitchTheme.astro";
 import Container from "./ui/Container.astro";
 import Icon from "./ui/Icon.astro";
 
@@ -27,7 +28,7 @@ const logoId = "main-logo"
                             <li>
                                 <a
                                     href={link.href}
-                                    class=" font-sharp_grotesk_light text-sm px-3 py-2 mx-1 block rounded-md transition duration-200 hover:bg-white/10"
+                                    class=" font-sharp_grotesk_light text-sm px-3 py-1 mx-1 block rounded-md transition duration-200 hover:bg-white/10"
                                 >
                                     {link.text}
                                 </a>
@@ -36,7 +37,9 @@ const logoId = "main-logo"
                     }
                 </ul>
             </nav>
-            <div class=" text-xs ">switch</div>
+            <div class="relative w-8 h-8">
+                <SwitchTheme/>
+            </div>
         </div>
     </Container>
 </header>
@@ -46,7 +49,7 @@ const logoId = "main-logo"
     .ftn-nav-container{
         @apply flex justify-between items-center mx-auto;
         @apply transition-all ease-in-out duration-700;
-        @apply w-full rounded-md;
+        @apply w-full h-10 rounded-md;
     }
     .ftn-header-scrolling .ftn-nav-container{
         @apply bg-blue-950/90 backdrop-blur-sm;
@@ -65,7 +68,7 @@ const logoId = "main-logo"
         if (!header) return;
         const scrollingClass = 'ftn-header-scrolling';
 
-        if (scrollPosition > 0) {
+        if (scrollPosition > 80) {
             header.classList.add(scrollingClass);
             // logo?.classList.add('invisible');
             // logoSecondary?.classList.remove('text-[0px]');

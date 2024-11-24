@@ -93,12 +93,15 @@
     :root[data-theme="light"] {
 
         /* Define Design Token Semantic */
+        
         --color_text:                       var(--brand_blue_950);
         --color_text_btn_primary:           var(--brand_blue_100);
         --color_text_btn_primary_hover:     var(--brand_blue_50);
         --color_bg:                         var(--brand_blue_100);        
         --color_bg_btn_primary:             var(--brand_violet_500);
         --color_bg_btn_primary_hover:       var(--brand_violet_600);
+        --iconModeSun:                      var(--brand_green_700);
+        --iconModeMoon:                     transparent;
     
     }
      
@@ -107,12 +110,15 @@
     :root[data-theme="dark"] {
     
         /* Define Design Token Semantic */
+        
         --color_text:                     var(--brand_blue_100);
         --color_text_btn_primary:         var(--brand_blue_50);
         --color_text_btn_primary_hover:   var(--brand_blue_50);
         --color_bg:                       var(--brand_blue_950);        
         --color_bg_btn_primary:           var(--brand_violet_500);
         --color_bg_btn_primary_hover:     var(--brand_violet_600);
+        --iconModeSun:                    transparent;
+        --iconModeMoon:                   var(--color_text);
     } 
 
 
