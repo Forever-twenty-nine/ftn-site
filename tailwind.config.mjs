@@ -1,75 +1,29 @@
-/** @type {import('tailwindcss').Config} */
+9/** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	// darkMode: "class",
 	theme: {
 		container: {
 			center: true,
 			padding: "2rem",
 		},
+		// Define and Use Design Token Component
 		extend: {
-			colors: {
-				brand_primary:{
-					50: "var(--brand_primary_50)",
-					100: "var(--brand_primary_100)",
-					200: "var(--brand_primary_200)",
-					300: "var(--brand_primary_300)",
-					400: "var(--brand_primary_400)",
-					500: "var(--brand_primary_500)",
-					600: "var(--brand_primary_600)",
-					700: "var(--brand_primary_700)",
-					800: "var(--brand_primary_800)",
-					900: "var(--brand_primary_900)",
-					950: "var(--brand_primary_950)",
-				},
-				brand_secondary:{
-					50: "var(--brand_secondary_50)",
-					100: "var(--brand_secondary_100)",
-					200: "var(--brand_secondary_200)",
-					300: "var(--brand_secondary_300)",
-					400: "var(--brand_secondary_400)",
-					500: "var(--brand_secondary_500)",
-					600: "var(--brand_secondary_600)",
-					700: "var(--brand_secondary_700)",
-					800: "var(--brand_secondary_800)",
-					900: "var(--brand_secondary_900)",
-					950: "var(--brand_secondary_950)",
-				},
-				brand_tertiary:{
-					50: "var(--brand_tertiary_50)",
-					100: "var(--brand_tertiary_100)",
-					200: "var(--brand_tertiary_200)",
-					300: "var(--brand_tertiary_300)",
-					400: "var(--brand_tertiary_400)",
-					500: "var(--brand_tertiary_500)",
-					600: "var(--brand_tertiary_600)",
-					700: "var(--brand_tertiary_700)",
-					800: "var(--brand_tertiary_800)",
-					900: "var(--brand_tertiary_900)",
-					950: "var(--brand_tertiary_950)",
-				},
-				brand_neutral:{
-					50: "var(--brand_neutral_50)",
-					100: "var(--brand_neutral_100)",
-					200: "var(--brand_neutral_200)",
-					300: "var(--brand_neutral_300)",
-					400: "var(--brand_neutral_400)",
-					500: "var(--brand_neutral_500)",
-					600: "var(--brand_neutral_600)",
-					700: "var(--brand_neutral_700)",
-					800: "var(--brand_neutral_800)",
-					900: "var(--brand_neutral_900)",
-					950: "var(--brand_neutral_950)",
-				},
-
-				// Define and Use Design Token Component
-				token_text: "var(--text)",
-				token_bg: "var(--background)",
-				token_btn_cta_text: "var(--btn_primary_text)",
-				token_btn_cta_text_hover: "var(--btn_primary_text_hover)",
-				token_btn_cta_bg: "var(--btn_primary_bg)",
-				token_btn_cta_bg_hover: "var(--btn_primary_bg_hover)",
+			backgroundImage: {
+				token_bg_gradient: "linear-gradient(var(--brand_green_500),var(--brand_blue_900)), linear-gradient(90deg, var(--brand_blue_950),var(--brand_blue_800)), linear-gradient(-90deg, var(--brand_turquoise_800),var(--brand_blue_900)), linear-gradient(-180deg, var(--brand_blue_950), var(--brand_turquoise_500));",
+				token_text_gradient: "linear-gradient(to top left, #2ce9ec, #aaf74d)" 
 			},
+			colors: {
+
+				token_border_strong: "var(--brand_green_500)",
+				token_border_strong_opacity: "rgba(170,247,77,.6)",
+				token_text: "var(--color_text)",
+				token_text_btn_cta: "var(--color_text_btn_primary)",
+				token_text_btn_cta_hover: "var(--color_text_btn_primary_hover)",
+				token_bg: "var(--color_bg)",
+				token_bg_btn_cta: "var(--color_bg_btn_primary)",
+				token_bg_btn_cta_hover: "var(--color_bg_btn_primary_hover)",
+			},
+			
 			fontFamily:{
 				sharp_grotesk_book:  ['SharpGrotesk-Book', 'sans-serif'],
 				sharp_grotesk_light:  ['SharpGrotesk-Light', 'sans-serif'],

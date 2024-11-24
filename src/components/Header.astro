@@ -8,15 +8,24 @@ interface Link {
 }
 
 const { links = [] }: { links?: Link[] } = Astro.props;
+const headerId = "main-header";
+const logoId = "main-logo"
+const logoNavId = "secondary-logo" 
 ---
 
-<header class="pt-4 fixed w-full z-50">
+<header id={headerId} class="pt-4 fixed w-full z-50 transition-all">
     <div class="ftn-container flex justify-between items-center">
-        <div class="">
+        <a id={logoId} href="#" class="transition-all">
             ftn agency
-        </div>
+        </a>
         <nav class=" relative border rounded-full border-solid border-brand_neutral-900 dark:border-white/10 overflow-hidden before:content-[''] before:w-full before:h-full before:absolute before:bg-neutral-950/50  before:backdrop-blur-sm before:z-0">
             <ul class="flex z-10 relative px-4">
+                <!-- <li id={logoNavId} class=" text-[0px] transition-all">
+                    <a href="#"
+                    class="">
+                        ftn agency
+                    </a>
+                </li> -->
                 {
                     links.map((link: Link) => (
                         <li>
@@ -32,7 +41,7 @@ const { links = [] }: { links?: Link[] } = Astro.props;
                 <!-- <li><a href="#">button here</a></li> -->
             </ul>
         </nav>
-        <div class=" text-xs">switch</div> 
+        <div class=" text-xs ">switch</div> 
     </div>
 </header>
 
