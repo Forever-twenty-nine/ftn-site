@@ -17,17 +17,11 @@ const logoId = "main-logo"
         <div class="ftn-nav-container">
             <a id={logoId} href="#" class="transition-all">
                 <figure>
-                    <Icon name="ftn" className="h-7 w-full" />
+                    <Icon name="ftn" className="h-7 w-full text-white" />
                 </figure>
             </a>
-            <nav class=" relative ">
+            <nav class="relative">
                 <ul class="flex z-10 relative px-4">
-                    <!-- <li id={logoNavId} class=" text-[0px] transition-all">
-                        <a href="#"
-                        class="">
-                            ftn agency
-                        </a>
-                    </li> -->
                     {
                         links.map((link: Link) => (
                             <li>
@@ -40,7 +34,6 @@ const logoId = "main-logo"
                             </li>
                         ))
                     }
-                    <!-- <li><a href="#">button here</a></li> -->
                 </ul>
             </nav>
             <div class=" text-xs ">switch</div>
@@ -53,11 +46,11 @@ const logoId = "main-logo"
     .ftn-nav-container{
         @apply flex justify-between items-center mx-auto;
         @apply transition-all ease-in-out duration-700;
-        @apply w-full bg-red-950;
+        @apply w-full rounded-md;
     }
     .ftn-header-scrolling .ftn-nav-container{
-        @apply bg-red-500;
-        @apply w-[600px]
+        @apply bg-blue-950/90 backdrop-blur-sm;
+        @apply w-[600px] py-2 px-2
     }
 </style>
 
@@ -72,14 +65,14 @@ const logoId = "main-logo"
         if (!header) return;
         const scrollingClass = 'ftn-header-scrolling';
 
-        if (scrollPosition > 50) {
+        if (scrollPosition > 0) {
             header.classList.add(scrollingClass);
-            logo?.classList.add('invisible');
-            logoSecondary?.classList.remove('text-[0px]');
+            // logo?.classList.add('invisible');
+            // logoSecondary?.classList.remove('text-[0px]');
         } else {
         header.classList.remove(scrollingClass);
-        logo?.classList.remove('invisible');
-        logoSecondary?.classList.add('text-[0px]');
+        // logo?.classList.remove('invisible');
+        // logoSecondary?.classList.add('text-[0px]');
         }
     };
 
