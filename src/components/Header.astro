@@ -1,4 +1,7 @@
 ---
+import Container from "./scaffolding/Container.astro";
+// import Icon from "./ui/Icon.astro";
+
 interface Link {
     href: string;
     text: string;
@@ -32,3 +35,63 @@ const { links = [] }: { links?: Link[] } = Astro.props;
         <div class=" text-xs">switch</div> 
     </div>
 </header>
+
+
+<style>
+    .ftn-nav-container{
+        @apply flex justify-between items-center mx-auto px-0;
+        @apply transition-all ease-in-out duration-700;
+        @apply w-full max-w-full;
+        @apply border border-transparent rounded-lg;
+    }
+    .ftn-header-scrolling .ftn-nav-container{
+        @apply bg-blue-950/90 backdrop-blur-sm border-white/5 shadow-xl;
+        @apply max-w-[620px] px-2 py-2
+    }
+
+</style>
+
+<script>
+    type NullableElement = HTMLElement | null;
+
+    const toggleHeaderStyles = (scrollPosition: number) => {
+        const header = document.getElementById('main-header') as NullableElement;
+        const logo = document.getElementById('main-logo') as NullableElement;
+        const logoSecondary = document.getElementById('secondary-logo') as NullableElement;
+
+        if (!header) return;
+        const scrollingClass = 'ftn-header-scrolling';
+
+        if (scrollPosition > 80) {
+            header.classList.add(scrollingClass);
+            // logo?.classList.add('invisible');
+            // logoSecondary?.classList.remove('text-[0px]');
+        } else {
+        header.classList.remove(scrollingClass);
+        // logo?.classList.remove('invisible');
+        // logoSecondary?.classList.add('text-[0px]');
+        }
+    };
+
+    // Función `throttle` para optimizar el evento `scroll`
+    const throttle = (func: (...args: any[]) => void, limit: number) => {
+    let lastCall = 0;
+    return (...args: any[]) => {
+        const now = Date.now();
+        if (now - lastCall >= limit) {
+            lastCall = now;
+            func(...args);
+        }
+    };
+    };
+
+    // Solo en el navegador
+    if (typeof window !== 'undefined') {
+    const onScroll = throttle(() => {
+        toggleHeaderStyles(window.scrollY);
+    }, 100);
+
+    window.addEventListener('scroll', onScroll);
+}
+
+</script>
