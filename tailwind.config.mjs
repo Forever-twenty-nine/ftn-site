@@ -9,7 +9,7 @@ export default {
 		// Define and Use Design Token Component
 		extend: {
 			backgroundImage: {
-				token_bg_gradient: "linear-gradient(var(--brand_green_500),var(--brand_blue_900)), linear-gradient(90deg, var(--brand_blue_400),var(--brand_blue_800)), linear-gradient(-90deg, var(--brand_turquoise_800),var(--brand_blue_900)), linear-gradient(-180deg, var(--brand_blue_950), var(--brand_turquoise_500));",
+				token_bg_gradient: "linear-gradient(var(--brand_green_500),var(--brand_blue_900)), linear-gradient(90deg, var(--brand_blue_950),var(--brand_blue_800)), linear-gradient(-90deg, var(--brand_turquoise_800),var(--brand_blue_900)), linear-gradient(-180deg, var(--brand_blue_950), var(--brand_turquoise_500));",
 				token_text_gradient: "linear-gradient(to top left, #2ce9ec, #aaf74d)" 
 			},
 			colors: {
