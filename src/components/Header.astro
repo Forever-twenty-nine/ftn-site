@@ -1,6 +1,6 @@
 ---
-import Container from "./scaffolding/Container.astro";
-// import Icon from "./ui/Icon.astro";
+import Container from "./ui/Container.astro";
+import Icon from "./ui/Icon.astro";
 
 interface Link {
     href: string;
@@ -10,54 +10,55 @@ interface Link {
 const { links = [] }: { links?: Link[] } = Astro.props;
 const headerId = "main-header";
 const logoId = "main-logo"
-const logoNavId = "secondary-logo" 
 ---
 
 <header id={headerId} class="pt-4 fixed w-full z-50 transition-all">
-    <div class="ftn-container flex justify-between items-center">
-        <a id={logoId} href="#" class="transition-all">
-            ftn agency
-        </a>
-        <nav class=" relative border rounded-full border-solid border-brand_neutral-900 dark:border-white/10 overflow-hidden before:content-[''] before:w-full before:h-full before:absolute before:bg-neutral-950/50  before:backdrop-blur-sm before:z-0">
-            <ul class="flex z-10 relative px-4">
-                <!-- <li id={logoNavId} class=" text-[0px] transition-all">
-                    <a href="#"
-                    class="">
-                        ftn agency
-                    </a>
-                </li> -->
-                {
-                    links.map((link: Link) => (
-                        <li>
-                            <a
-                                href={link.href}
-                                class=" font-sharp_grotesk_light text-sm px-3 py-3 block hover:text-brand_neutral-50 transition duration-200"
-                            >
-                                {link.text}
-                            </a>
-                        </li>
-                    ))
-                }
-                <!-- <li><a href="#">button here</a></li> -->
-            </ul>
-        </nav>
-        <div class=" text-xs ">switch</div> 
-    </div>
+    <Container>
+        <div class="ftn-nav-container">
+            <a id={logoId} href="#" class="transition-all">
+                <figure>
+                    <Icon name="ftn" className="h-7 w-full" />
+                </figure>
+            </a>
+            <nav class=" relative ">
+                <ul class="flex z-10 relative px-4">
+                    <!-- <li id={logoNavId} class=" text-[0px] transition-all">
+                        <a href="#"
+                        class="">
+                            ftn agency
+                        </a>
+                    </li> -->
+                    {
+                        links.map((link: Link) => (
+                            <li>
+                                <a
+                                    href={link.href}
+                                    class=" font-sharp_grotesk_light text-sm px-3 py-2 mx-1 block rounded-md transition duration-200 hover:bg-white/10"
+                                >
+                                    {link.text}
+                                </a>
+                            </li>
+                        ))
+                    }
+                    <!-- <li><a href="#">button here</a></li> -->
+                </ul>
+            </nav>
+            <div class=" text-xs ">switch</div>
+        </div>
+    </Container>
 </header>
 
 
 <style>
     .ftn-nav-container{
-        @apply flex justify-between items-center mx-auto px-0;
+        @apply flex justify-between items-center mx-auto;
         @apply transition-all ease-in-out duration-700;
-        @apply w-full max-w-full;
-        @apply border border-transparent rounded-lg;
+        @apply w-full bg-red-950;
     }
     .ftn-header-scrolling .ftn-nav-container{
-        @apply bg-blue-950/90 backdrop-blur-sm border-white/5 shadow-xl;
-        @apply max-w-[620px] px-2 py-2
+        @apply bg-red-500;
+        @apply w-[600px]
     }
-
 </style>
 
 <script>
@@ -71,14 +72,14 @@ const logoNavId = "secondary-logo"
         if (!header) return;
         const scrollingClass = 'ftn-header-scrolling';
 
-        if (scrollPosition > 80) {
+        if (scrollPosition > 50) {
             header.classList.add(scrollingClass);
-            // logo?.classList.add('invisible');
-            // logoSecondary?.classList.remove('text-[0px]');
+            logo?.classList.add('invisible');
+            logoSecondary?.classList.remove('text-[0px]');
         } else {
         header.classList.remove(scrollingClass);
-        // logo?.classList.remove('invisible');
-        // logoSecondary?.classList.add('text-[0px]');
+        logo?.classList.remove('invisible');
+        logoSecondary?.classList.add('text-[0px]');
         }
     };
 
