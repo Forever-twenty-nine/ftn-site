@@ -3,21 +3,23 @@
 import Section from "./scaffolding/Section.astro";
 import Container from "./scaffolding/Container.astro";
 
-// import Line from "./ui/Line.astro";
+import Line from "./ui/Line.astro";
 
 ---
 
 <Section>
+    <Line type="lineTL"/> 
     <Container className=" text-center">
-        <h1 class="font-sharp_grotesk_light  text-sm uppercase tracking-widest">
+        <h1 class="font-sharp_grotesk_book  text-sm uppercase tracking-widest">
             Agencia de diseño UX/UI y desarrollo web
         </h1>
-        <h2 class="font-sharp_grotesk_semibold25 text-5xl leading-snug py-10">
+        <h2 class="font-sharp_grotesk_medium25 text-5xl leading-snug py-10"> 
             Transformamos tus ideas en productos
             <span class=" bg-clip-text text-transparent bg-token_text_gradient ">
                 digitales únicos
             </span>
         </h2>
+        <a href="#">Button here</a>
     </Container>
 </Section>
 

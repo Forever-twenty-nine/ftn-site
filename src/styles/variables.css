@@ -65,6 +65,22 @@
         font-display: swap; /* Lo muestra de inmediato */
     }
     @font-face {
+        font-family: 'SharpGrotesk-Book25';
+        src: url('/fonts/SharpGrotesk-Book25.woff2') format('woff2'),
+             url('/fonts/SharpGrotesk-Book25.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap; /* Lo muestra de inmediato */
+    }
+    @font-face {
+        font-family: 'SharpGrotesk-Medium25';
+        src: url('/fonts/SharpGrotesk-Medium25.woff2') format('woff2'),
+             url('/fonts/SharpGrotesk-Medium25.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap; /* Lo muestra de inmediato */
+    }
+    @font-face {
         font-family: 'SharpGrotesk-Light';
         src: url('/fonts/SharpGrotesk-Light20.woff2') format('woff2'),
              url('/fonts/SharpGrotesk-Light20.woff') format('woff');
