@@ -1,6 +1,4 @@
 ---
-import variables from '../styles/variables.css'; 
-
 const { title } = Astro.props;
 ---
 
@@ -9,8 +7,9 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <!-- applied styles -->
-    <link rel="stylesheet" href={variables}>
+    <style is:global>
+      @import "../styles/variables.css";
+    </style>
   </head>
   <body class="bg-blend-darken font-sharp_grotesk_light bg-token_bg_gradient text-token_text">
     <slot /> 
