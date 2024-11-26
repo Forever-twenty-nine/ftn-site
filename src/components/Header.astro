@@ -16,11 +16,14 @@ const logoId = "main-logo"
 <header id={headerId} class="pt-4 fixed w-full z-50 transition-all">
     <Container>
         <div class="ftn-nav-container">
-            <a id={logoId} href="#" class="transition-all">
-                <figure>
-                    <Icon name="ftn" className="h-7 w-full text-white" />
+            <a id={logoId} href="#" class="transition-all w-[148px]">
+                <figure id="logo" class=" overflow-hidden">
+                    <Icon name="ftn" className="w-[148px] h-[28px] text-white" />
                 </figure>
             </a>
+            <button class="w-14 h-14 p-4 lg:hidden">
+                <svg class="red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" /></svg>
+            </button>
             <nav class="relative">
                 <ul class="flex z-10 relative px-4">
                     {
@@ -37,9 +40,12 @@ const logoId = "main-logo"
                     }
                 </ul>
             </nav>
-            <div class="relative w-8 h-8">
-                <SwitchTheme/>
+            <div class="w-[148px]">
+                <div class="relative w-8 h-8 ml-auto">
+                    <SwitchTheme/>
+                </div>
             </div>
+            
         </div>
     </Container>
 </header>
@@ -62,7 +68,7 @@ const logoId = "main-logo"
 
     const toggleHeaderStyles = (scrollPosition: number) => {
         const header = document.getElementById('main-header') as NullableElement;
-        const logo = document.getElementById('main-logo') as NullableElement;
+        const logo = document.getElementById('logo') as NullableElement;
         const logoSecondary = document.getElementById('secondary-logo') as NullableElement;
 
         if (!header) return;
@@ -70,11 +76,11 @@ const logoId = "main-logo"
 
         if (scrollPosition > 80) {
             header.classList.add(scrollingClass);
-            // logo?.classList.add('invisible');
+            logo?.classList.add('w-10');
             // logoSecondary?.classList.remove('text-[0px]');
         } else {
         header.classList.remove(scrollingClass);
-        // logo?.classList.remove('invisible');
+        logo?.classList.remove('w-10');
         // logoSecondary?.classList.add('text-[0px]');
         }
     };
