@@ -1,0 +1,19 @@
+---
+import FtnLogo from "../icon/FtnLogo.astro";
+
+const iconMap = {
+    ftn: FtnLogo,
+};
+
+interface IconProps {
+    name: keyof typeof iconMap;
+    className?: string;
+}
+
+const { name, className = "" }: IconProps = Astro.props as IconProps;
+
+const IconComponent = iconMap[name];
+
+---
+
+{IconComponent ? <IconComponent class={className}/> : null}

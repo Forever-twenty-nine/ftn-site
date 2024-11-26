@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+
+        /* Define Design Token Primitive */
+        --brand_green_50: #FDFFF7;
+        --brand_green_100: #FBFFED;
+        --brand_green_200: #F0FCD2;
+        --brand_green_300: #E6FCB6; 
+        --brand_green_400: #CCFA82;
+        --brand_green_500: #aaf74d; /* Brand */
+        --brand_green_600: #91DE3E;
+        --brand_green_700: #70BA2B;
+        --brand_green_800: #50941C;
+        --brand_green_900: #367010;
+        --brand_green_950: #1D4706;
+
+        --brand_violet_50: #FBF5FF;
+        --brand_violet_100: #F8EDFF;
+        --brand_violet_200: #EACFFC;
+        --brand_violet_300: #D7AFFA;
+        --brand_violet_400: #AE77F7;  /* brand */
+        --brand_violet_500: #7b40f4;
+        --brand_violet_600: #6832DB; 
+        --brand_violet_700: #4F23B8;
+        --brand_violet_800: #391894;
+        --brand_violet_900: #250D6E;
+        --brand_violet_950: #140647;
+
+        --brand_turquoise_50: #F5FFFF;
+        --brand_turquoise_100: #E8FCFC;
+        --brand_turquoise_200: #C8F9FA;
+        --brand_turquoise_300: #A8F6F7;
+        --brand_turquoise_400: #68F0F2; 
+        --brand_turquoise_500: #2ce9ec;  /* brand */
+        --brand_turquoise_600: #24CAD6;
+        --brand_turquoise_700: #199EB3;
+        --brand_turquoise_800: #10738F;
+        --brand_turquoise_900: #0A4F6B;
+        --brand_turquoise_950: #042D45;
+
+        --brand_blue_50:     #F7FBFC;
+        --brand_blue_100:    #EDF5FA;
+        --brand_blue_200:    #D5E6F2;
+        --brand_blue_300:    #BCD4EB;
+        --brand_blue_400:    #8DACD9;
+        --brand_blue_500:    #6484c9;
+        --brand_blue_600:    #516FB5;
+        --brand_blue_700:    #385396;
+        --brand_blue_800:    #243978;
+        --brand_blue_900:    #14255C;
+        --brand_blue_950:    #08123B;        
+    }
+
+ 
+    @font-face {
+        font-family: 'SharpGrotesk-Book';
+        src: url('/fonts/SharpGrotesk-Book20.woff2') format('woff2'),
+             url('/fonts/SharpGrotesk-Book20.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap; /* Lo muestra de inmediato */
+    }
+    @font-face {
+        font-family: 'SharpGrotesk-Book25';
+        src: url('/fonts/SharpGrotesk-Book25.woff2') format('woff2'),
+             url('/fonts/SharpGrotesk-Book25.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap; /* Lo muestra de inmediato */
+    }
+    @font-face {
+        font-family: 'SharpGrotesk-Medium25';
+        src: url('/fonts/SharpGrotesk-Medium25.woff2') format('woff2'),
+             url('/fonts/SharpGrotesk-Medium25.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap; /* Lo muestra de inmediato */
+    }
+    @font-face {
+        font-family: 'SharpGrotesk-Light';
+        src: url('/fonts/SharpGrotesk-Light20.woff2') format('woff2'),
+             url('/fonts/SharpGrotesk-Light20.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap; /* Lo muestra de inmediato */
+    }
+    @font-face {
+        font-family: 'SharpGrotesk-SemiBold';
+        src: url('/fonts/SharpGrotesk-SemiBold20.woff2') format('woff2'),
+             url('/fonts/SharpGrotesk-SemiBold20.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap; /* Lo muestra de inmediato */
+    }
+    @font-face {
+        font-family: 'SharpGrotesk-SemiBold25';
+        src: url('/fonts/SharpGrotesk-SemiBold25.woff2') format('woff2'),
+             url('/fonts/SharpGrotesk-SemiBold25.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap; /* Lo muestra de inmediato */
+    }
+
+    
+    :root[data-theme="light"] {
+
+        /* Define Design Token Semantic */
+        
+        --color_text:                       var(--brand_blue_950);
+        --color_text_btn_primary:           var(--brand_blue_100);
+        --color_text_btn_primary_hover:     var(--brand_blue_50);
+        --color_bg:                         var(--brand_blue_100);        
+        --color_bg_btn_primary:             var(--brand_violet_500);
+        --color_bg_btn_primary_hover:       var(--brand_violet_600);
+        --iconModeSun:                      var(--brand_green_700);
+        --iconModeMoon:                     transparent;
+    
+    }
+     
+    
+    
+    :root[data-theme="dark"] {
+    
+        /* Define Design Token Semantic */
+        
+        --color_text:                     var(--brand_blue_100);
+        --color_text_btn_primary:         var(--brand_blue_50);
+        --color_text_btn_primary_hover:   var(--brand_blue_50);
+        --color_bg:                       var(--brand_blue_950);        
+        --color_bg_btn_primary:           var(--brand_violet_500);
+        --color_bg_btn_primary_hover:     var(--brand_violet_600);
+        --iconModeSun:                    transparent;
+        --iconModeMoon:                   var(--color_text);
+    } 
+
+
+}
+

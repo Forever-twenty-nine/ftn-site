@@ -1,14 +1,27 @@
-<section class="bg-blue-600 text-white py-20">
-    <div class="container mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-4">
-            Diseño Gráfico y Desarrollo de Software
+---
+
+import Section from "./scaffolding/Section.astro";
+import Container from "./scaffolding/Container.astro";
+
+import Line from "./ui/Line.astro";
+import Button from "./ui/Button.astro";
+
+---
+
+<Section>
+    <Line type="lineTL"/> 
+    <Container className=" text-center">
+        <h1 class="font-sharp_grotesk_book  text-sm uppercase tracking-widest">
+            Agencia de diseño UX/UI y desarrollo web
+        </h1>
+        <h2 class="font-sharp_grotesk_medium25 text-5xl leading-snug py-10"> 
+            Transformamos tus ideas en productos
+            <span class=" bg-clip-text text-transparent bg-token_text_gradient ">
+                digitales únicos
+            </span>
         </h2>
-        <p class="text-lg mb-8">
-            Transformamos tus ideas en productos digitales únicos
-        </p>
-        <a
-            href="#contacto"
-            class="bg-white text-blue-600 px-6 py-3 rounded-full">Contáctanos</a
-        >
-    </div>
-</section>
+        <Button href="#contact">
+            Hablemos!
+        </Button>
+    </Container>
+</Section>

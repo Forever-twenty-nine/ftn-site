@@ -1,17 +1,18 @@
 ---
+import variables from '../styles/variables.css'; 
+
 const { title } = Astro.props;
 ---
-<html lang="es">
+
+<html lang="es" class=" scroll-smooth" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <!-- applied styles -->
+    <link rel="stylesheet" href={variables}>
   </head>
-  <body>
-    <main>
-      <slot /> 
-    </main>
+  <body class="bg-blend-darken font-sharp_grotesk_light bg-token_bg_gradient text-token_text">
+    <slot /> 
   </body>
 </html>
-
