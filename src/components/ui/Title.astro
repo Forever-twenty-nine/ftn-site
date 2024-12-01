@@ -1,34 +1,54 @@
 ---
+import type { isJSDocNamepathType } from "typescript";
+import Icon from "./Icon.astro";
 
 interface TitleProps{
     isIcon?: boolean;
-    iconUrl?: string;
-    iconAlt?: string;
+    iconName?: keyof typeof isJSDocNamepathType;
+    alignment?: 'left' | 'center' | 'right';
+    title?: string;
+    isTitleHighlightVisible?: boolean;
+    titleHighlight?: string;
 }
 
 const { 
     isIcon = true,
-    iconUrl, 
-    iconAlt 
+    iconName,
+    iconClass,
+    alignment = 'left',
+    title,
+    isTitleHighlightVisible = true,
+    titleHighlight,
 } = Astro.props
 
+const titleAlignment = 
+    alignment === 'center' ? 'text-center' :
+    alignment === 'right' ? 'text-right' :
+    'text-left';
+const iconAlignment = 
+    alignment === 'center' ? 'mx-auto' :
+    alignment === 'right' ? 'ml-auto' :
+    'mr-auto';
 ---
 
 <div>
     { isIcon ? 
-        <div class=" mb-4 w-20 h-20 border border-token_border_strong rounded-xl p-1 shadow-2xl shadow-[#abf74d7e]">
+        <div class={`mb-4 w-20 h-20 border border-token_border_strong rounded-xl p-1 shadow-2xl shadow-[#abf74d7e] ${iconAlignment}`}>
             <div class="border border-token_border_strong_opacity w-full h-full rounded-lg p-1">
                 <div class="bg-gradient-to-b to-[rgba(170,247,77,.15)] from-[rgba(170,247,77,.0)] w-full h-full rounded-md">
-                    <img class="p-2" src={iconUrl} alt={iconAlt}>
+                    <Icon name={iconName} class={` ${iconClass}`} />
                 </div>
             </div>
         </div> : '' 
     }
     
-    <h2 class="text-4xl font-sharp_grotesk_semibold25 leading-snug">
-        Construimos sitios web </br> 
-        <span class=" bg-clip-text text-transparent bg-token_text_gradient">
-            más intuitivos y funcionales
-        </span>
+    <h2 
+        class={` text-3xl md:text-4xl font-sharp_grotesk_book25 leading-snug mx-auto mb-10 ${titleAlignment}`}>
+        {title} </br>
+        {isTitleHighlightVisible && (
+            <span class=" bg-clip-text text-transparent bg-token_text_gradient">
+                {titleHighlight}
+            </span>
+        )}        
     </h2>
 </div>

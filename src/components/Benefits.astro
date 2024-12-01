@@ -1,11 +1,49 @@
 ---
-import Section from "./ui/Section.astro"
+import Section from "./scaffolding/Section.astro"
 import Card from "./ui/Card.astro"
+import Container from "./ui/Container.astro"
+
+import Title from "./ui/Title.astro"
+
+const sectionId = "beneficios"
 
 ---
 
-<Section classSection="" classContainer="flex gap-4">    
-    <Card/>
-    <Card/>
-    <Card/>
+<Section idName={sectionId} className="pt-24">   
+    <Container>
+        <Title 
+            isIcon={true}
+            iconName="box"
+            iconAlignment="center"
+            iconClass="w-10"
+            alignment="center"
+            title="Todo lo que necesitas"
+            isTitleHighlightVisible={true}
+            titleHighlight="en un solo lugar" 
+        />
+        <div class="grid grid-cols-1 md:grid-cols-2 grid-row-3 md:grid-row-2 gap-6">
+            <Card 
+                className=""    
+                iconName="chat"
+                title="Atención cercana y personalizada"
+                description="Entendemos tus necesidades y te acompañamos para lograr resultados que potencien tu negocio."
+            />
+            <Card
+                className=""    
+                iconName="rocket"
+                strokeClass=""
+                title="Enfoque en la conversión"
+                description="Desarrollamos páginas que no solo se destacan, sino que generan conversiones reales para impulsar tu negocio."
+            />
+            <Card
+                className="md:col-span-2 row-start-2 md:w-4/5 md:mx-auto "    
+                iconName="collaboration"
+                title="Compromiso con la excelencia y soporte continuo "
+                description="Estamos comprometidos a brindarte un servicio excepcional desde el inicio hasta el final del proyecto y más allá. Ofrecemos soporte técnico continuo y estamos siempre disponibles para responder a tus preguntas y resolver cualquier problema que pueda surgir."
+            />
+        </div>
+       
+    </Container>
+    
+    
 </Section>
