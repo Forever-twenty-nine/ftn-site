@@ -10,19 +10,31 @@ interface Link {
 
 const { links = [] }: { links?: Link[] } = Astro.props;
 const headerId = "main-header";
-const logoId = "main-logo"
+const logoId = "main-logo";
+const menuId = "mobile-menu";
 ---
 
-<header id={headerId} class="pt-4 fixed w-full z-50 transition-all">
+<header 
+    id={headerId} 
+    class="pt-4 fixed w-full z-50 transition-all bg-transparent">
     <Container>
-        <div class="ftn-nav-container">
-            <a id={logoId} href="#" class="transition-all">
-                <figure>
-                    <Icon name="ftn" className="h-7 w-full text-white" />
+        <div class="ftn-nav-container ">
+            <a 
+                id={logoId} 
+                href="#" 
+                class="transition-all w-[148px]">
+                <figure id="logo" class=" overflow-hidden">
+                    <Icon name="ftn" className="w-[148px] h-[28px] text-white" />
                 </figure>
             </a>
-            <nav class="relative">
-                <ul class="flex z-10 relative px-4">
+            
+
+            <nav 
+                id={menuId} 
+                class="relative hidden md:block">
+                
+                <ul 
+                    class="flex  lg:flex-row lg:bg-transparent w-full lg:w-auto z-20 lg:z-auto rounded-md p-4 lg:p-0 gap-4 lg:gap-0 transition-all duration-300">
                     {
                         links.map((link: Link) => (
                             <li>
@@ -37,9 +49,18 @@ const logoId = "main-logo"
                     }
                 </ul>
             </nav>
-            <div class="relative w-8 h-8">
-                <SwitchTheme/>
+            <div class="w-[148px]">
+                <div class="relative w-8 h-8 ml-auto">
+                    <SwitchTheme/>
+                </div>
             </div>
+            <!-- <button 
+                id="menu-toggle"
+                class="w-14 h-14 p-4 lg:hidden flex items-center justify-center"
+                aria-expanded="false"
+                aria-controls={menuId}>
+                <svg class="w-6 h-6 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" /></svg>
+            </button> -->
         </div>
     </Container>
 </header>
@@ -47,14 +68,17 @@ const logoId = "main-logo"
 
 <style>
     .ftn-nav-container{
-        @apply flex justify-between items-center mx-auto;
-        @apply transition-all ease-in-out duration-700;
-        @apply w-full h-10 rounded-md;
+        @apply flex justify-between items-center rounded-lg mx-auto transition-all ease-in-out duration-700 w-full;
     }
     .ftn-header-scrolling .ftn-nav-container{
         @apply bg-gray-950/70 backdrop-blur-sm shadow-lg;
-        @apply w-[600px] py-4 px-2 h-14
+        @apply lg:w-[600px] py-4 px-2 h-14
     }
+
+    nav{
+
+    }
+    
 </style>
 
 <script>
@@ -62,7 +86,7 @@ const logoId = "main-logo"
 
     const toggleHeaderStyles = (scrollPosition: number) => {
         const header = document.getElementById('main-header') as NullableElement;
-        const logo = document.getElementById('main-logo') as NullableElement;
+        const logo = document.getElementById('logo') as NullableElement;
         const logoSecondary = document.getElementById('secondary-logo') as NullableElement;
 
         if (!header) return;
@@ -70,11 +94,11 @@ const logoId = "main-logo"
 
         if (scrollPosition > 80) {
             header.classList.add(scrollingClass);
-            // logo?.classList.add('invisible');
+            logo?.classList.add('w-10');
             // logoSecondary?.classList.remove('text-[0px]');
         } else {
         header.classList.remove(scrollingClass);
-        // logo?.classList.remove('invisible');
+        logo?.classList.remove('w-10');
         // logoSecondary?.classList.add('text-[0px]');
         }
     };
