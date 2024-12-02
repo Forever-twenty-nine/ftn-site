@@ -10,10 +10,15 @@ export default {
 		extend: {
 			backgroundImage: {
 				token_bg_gradient: "linear-gradient(yellow,green), linear-gradient(90deg, green,var(--brand_blue_800)), linear-gradient(-180deg, green,var(--brand_blue_500)), linear-gradient(-240deg, darkblue, var(--brand_violet_500));",
-				token_text_gradient: "linear-gradient(to top left, #2ce9ec, #aaf74d)" 
+				token_text_gradient: "linear-gradient(to top left, #2ce9ec, #a3ff32)" 
 			},
 			colors: {
-
+				color_green: "var(--brand_green_500)",
+				color_green_opa: "#aaf74d20",
+				color_violet: "var(--brand_violet_800)",
+				color_turquoise: "var(--brand_turquoise_800)",
+				color_blue: "var(--brand_blue_800)",
+				color_blue_opa: "#24397830",
 				token_border_strong: "var(--brand_green_500)",
 				token_border_strong_opacity: "rgba(170,247,77,.6)",
 				token_text: "var(--color_text)",

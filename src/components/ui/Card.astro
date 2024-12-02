@@ -1,6 +1,27 @@
 ---
+import Icon from "./Icon.astro";
+
+const {
+    className,
+    iconName,
+    title,
+    description
+} = Astro.props;
+
 ---
 
-<div class="border border-solid border-white/20 rounded-lg p-6 w-full">
-    card
+<div 
+    class={`group border border-solid border-white/20 rounded-lg p-8 bg-white/5 transition-all ease-in hover:shadow-2xl  hover:-translate-y-3 hover:bg-color_green_opa hover:border-token_border_strong_opacity hover:shadow-[#abf74d30] ${className}`}>
+    <Icon 
+        name={iconName} 
+        className="size-10 mb-4 text-color_green" fillClass="fill-red-500" 
+        strokeClass="stroke-blue-500"/> 
+    <h2 
+        class=" text-2xl font-sharp_grotesk_book25 mb-4">
+        {title}
+    </h2>
+    <p
+        class=" text-base leading-snug">
+        {description}
+    </p>
 </div>

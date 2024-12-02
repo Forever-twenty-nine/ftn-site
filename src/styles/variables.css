@@ -6,12 +6,12 @@
     :root {
 
         /* Define Design Token Primitive */
-        --brand_green_50: #FDFFF7;
+        --brand_green_50: #fdfff7;
         --brand_green_100: #FBFFED;
         --brand_green_200: #F0FCD2;
         --brand_green_300: #E6FCB6; 
         --brand_green_400: #CCFA82;
-        --brand_green_500: #aaf74d; /* Brand */
+        --brand_green_500: rgb(170, 247, 77); /* Brand */
         --brand_green_600: #91DE3E;
         --brand_green_700: #70BA2B;
         --brand_green_800: #50941C;
