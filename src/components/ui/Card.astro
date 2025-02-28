@@ -1,27 +1,26 @@
 ---
+
+import Heading from "./Heading.astro";
 import Icon from "./Icon.astro";
+import Texts from "./Texts.astro";
 
 const {
-    className,
+    class: extraClasses,
     iconName,
-    title,
-    description
 } = Astro.props;
 
 ---
 
 <div 
-    class={`group border border-solid border-white/20 rounded-lg p-8 bg-white/5 transition-all ease-in hover:shadow-2xl  hover:-translate-y-3 hover:bg-color_green_opa hover:border-token_border_strong_opacity hover:shadow-[#abf74d30] ${className}`}>
+    class={`group border border-solid border-white/20 rounded-lg p-8 bg-white/5 transition-all ease-in hover:shadow-xl  hover:-translate-y-3 hover:bg-color_green_opa hover:border-token_border_strong_opacity hover:shadow-[#abf74d30] ${extraClasses}`}>
     <Icon 
         name={iconName} 
         className="size-10 mb-4 text-color_green" fillClass="fill-red-500" 
         strokeClass="stroke-blue-500"/> 
-    <h2 
-        class=" text-2xl font-sharp_grotesk_book25 mb-4">
-        {title}
-    </h2>
-    <p
-        class=" text-base leading-snug">
-        {description}
-    </p>
+    <Heading tag="h3" class="mb-4">
+        <slot name="heading"/>
+    </Heading>
+    <Texts>
+        <slot name="texts" />
+    </Texts>
 </div>
