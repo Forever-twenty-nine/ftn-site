@@ -1,0 +1,54 @@
+---
+
+const { tag = "h3", class: extraClasses } = Astro.props;
+
+const commonClasses = "text-yellow-500";
+
+const baseClasses = {
+  h1: "text-5xl font-extrabold leading-tight",
+  h2: "text-4xl font-semibold leading-snug",
+  h3: "text-3xl font-medium leading-normal",
+  h4: "text-2xl font-normal leading-relaxed",
+  h5: "text-xl font-light leading-loose",
+  h6: "text-lg font-light leading-loose"
+};
+
+
+
+const tagClasses = baseClasses[tag as keyof typeof baseClasses] || baseClasses.h3;
+
+const allClasses = `${commonClasses} ${tagClasses} ${extraClasses}`;
+
+---
+
+{
+    tag === 'h1' ? (
+      <h1 class={allClasses}>
+        <slot/>
+      </h1>
+    ) : tag === 'h2' ? (
+      <h2 class={allClasses}>
+        <slot/>
+      </h2>
+    ) : tag === 'h3' ? (
+      <h3 class={allClasses}>
+        <slot/>
+      </h3>
+    ) : tag === 'h4' ? (
+      <h4 class={allClasses}>
+        <slot/>
+      </h4>
+    ) : tag === 'h5' ? (
+      <h5 class={allClasses}>
+        <slot/>
+      </h5>
+    ) : tag === 'h6' ? (
+      <h6 class={allClasses}>
+        <slot/>
+      </h6>
+    ) : (
+      <h1 class={allClasses}>
+        <slot/>
+      </h1>  
+    )
+  }
