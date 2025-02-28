@@ -7,23 +7,17 @@ import Line from "./ui/Line.astro";
 import Button from "./ui/Button.astro";
 import Heading from "./ui/Heading.astro";
 import TextGradient from "./ui/TextGradient.astro";
+import Texts from "./ui/Texts.astro";
 
 ---
 
 <Section>
     <Line type="lineTL"/> 
     <Container className=" text-center">
-        <h1 class="font-sharp_grotesk_book text-sm uppercase tracking-widest">
+        <Texts tag="small" class="uppercase">
             Agencia de diseño UX/UI y desarrollo web
-        </h1>
-        
-        <h2 class="font-sharp_grotesk_medium25 text-5xl leading-snug py-10"> 
-            Transformamos tus ideas en productos
-            <span class=" bg-clip-text text-transparent bg-token_text_gradient ">
-                digitales únicos
-            </span>
-        </h2>
-        <Heading tag="h1" class="">
+        </Texts>
+        <Heading tag="h1" class="py-12">
             Transformamos tus ideas en productos
             <TextGradient>
                 digitales únicos

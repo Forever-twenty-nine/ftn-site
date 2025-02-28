@@ -1,0 +1,34 @@
+---
+
+const { tag = "p", class: extraClasses } = Astro.props;
+
+const commonClasses = "font-sharp_grotesk_light";
+
+const baseClasses = {
+  p: "text-base",
+  small: "text-xs"
+};
+
+
+
+const tagClasses = baseClasses[tag as keyof typeof baseClasses] || baseClasses.p;
+
+const allClasses = `${commonClasses} ${tagClasses} ${extraClasses}`;
+
+---
+
+{
+    tag === 'p' ? (
+      <p class={allClasses}>
+        <slot/>
+      </p>
+    ) : tag === 'small' ? (
+      <small class={allClasses}>
+        <slot/>
+      </small>
+    ) : (
+      <p class={allClasses}>
+        <slot/>
+      </p>  
+    )
+  }
